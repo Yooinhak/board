@@ -1,22 +1,12 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Head from 'next/head';
+import styled from 'styled-components';
 
 export default function ClientSide() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>TEST</main>
-
-      <footer className={styles.footer}>
-        <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  );
+  return <Wrapper>hi</Wrapper>;
 }
+
+const Wrapper = styled.div`
+  padding: 8px;
+  border: 1px solid black;
+  background: ${({ theme }) => theme.colors.primary['G']};
+`;

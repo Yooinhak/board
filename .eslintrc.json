@@ -1,3 +1,22 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    // @typescript-eslint를 적용하고 recommended 규칙으로 확장.
+    "plugin:@typescript-eslint/recommended",
+    // eslint-plugin-prettier + eslint-config-prettier 동시 적용.
+    "plugin:prettier/recommended",
+    // prettier 규칙과 충돌하는 @typescript-eslint/eslint-plugin 규칙 비활성화.
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    // 'React' must be in scope when using JSX 에러 해결 (Next.js)
+    "react/react-in-jsx-scope": "off",
+    // ts파일에서 tsx구문 허용 (Next.js)
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }]
+  }
 }
