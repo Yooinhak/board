@@ -78,13 +78,22 @@ export const purple = {
 
 // 대표컬러
 export const primary = {
-  10: '#F1EFFB',
-  50: '#D7C0F1',
-  100: '#B488E5',
-  200: '#036EB8',
-  400: '#995EDC',
-  500: '#7E34D3',
-  G: 'linear-gradient(317deg, #7E34D3 18.97%, #5C30D8 100%)',
+  // 10: '#F1EFFB',
+  // 50: '#D7C0F1',
+  // 100: '#B488E5',
+  // 200: '#036EB8',
+  // 400: '#995EDC',
+  // 500: '#7E34D3',
+  // G: 'linear-gradient(317deg, #7E34D3 18.97%, #5C30D8 100%)',
+  100: '#F4E5FD',
+  200: '#E8CCFB',
+  300: '#D5AFF4',
+  400: '#C097E9',
+  500: '#A374DB',
+  600: '#7F54BC',
+  700: '#5E3A9D',
+  800: '#41257F',
+  900: '#2C1669',
 };
 
 export const sub = {
@@ -97,6 +106,7 @@ export const sub = {
 };
 
 export const semantic = {
+  gradient: `linear-gradient(to right bottom, #c097e9, #acacf8, #9dbeff, #98ceff, #9fdcfe);`,
   action: {
     primary: blue[400],
     secondary: neutral[40],
