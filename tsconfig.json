@@ -15,10 +15,10 @@
     "jsx": "preserve",
     "incremental": true,
 
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@components/*": ["pages/components/*"],
-      "@interfaces/*": ["pages/interfaces/*"]
+      "@components/*": ["components/*"],
+      "@interfaces/*": ["interfaces/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
-import theme from '../styles';
+import theme from '@components/theme';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

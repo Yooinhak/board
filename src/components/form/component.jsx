@@ -1,38 +1,22 @@
 import { FormProvider } from 'react-hook-form';
 import styled from 'styled-components';
 
-const Component = ({
-  children,
-  form,
-  onSubmit,
-  onError,
-  hasDefaultMargin = true,
-}) => {
+const Component = ({ children, form, onSubmit, onError }) => {
   return (
     <FormProvider {...form}>
-      <Form
-        onSubmit={form.handleSubmit(onSubmit, onError)}
-        hasDefaultMargin={hasDefaultMargin}
-      >
-        {children}
-      </Form>
+      <Form onSubmit={form.handleSubmit(onSubmit, onError)}>{children}</Form>
     </FormProvider>
   );
 };
 
 const Form = styled.form`
-  ${({ hasDefaultMargin }) => {
-    if (hasDefaultMargin) {
-      return `
-        & > * {
-          margin-bottom: 24px;
+  & > * {
+    margin-bottom: 24px;
 
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }`;
+    &:last-child {
+      margin-bottom: 0;
     }
-  }}
+  }
 `;
 
 export default Component;
